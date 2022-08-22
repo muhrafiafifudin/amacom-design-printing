@@ -14,5 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('users.pages.home');
+    return view('admin.pages.dashboard');
 });

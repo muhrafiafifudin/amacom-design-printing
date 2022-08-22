@@ -55,21 +55,21 @@
     <div class="full-layer-mid-header">
         <div class="container">
             <div class="row clearfix align-items-center">
-                <div class="col-lg-3 col-md-9 col-sm-6">
+                <div class="col-lg-3">
                     <div class="brand-logo text-lg-center">
                         <a href="home.html">
-                            <img src="images/main-logo/groover-branding-1.png" alt="Groover Brand Logo" class="app-brand-logo">
+                            <h2>AMACOM</h2>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-6 u-d-none-lg">
+                <div class="col-lg-7">
                     <form class="form-searchbox">
                         <label class="sr-only" for="search-landscape">Search</label>
                         <input id="search-landscape" type="text" class="text-field" placeholder="Search everything">
                         <button id="btn-search" type="submit" class="button button-primary fas fa-search"></button>
                     </form>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-6">
+                <div class="col-lg-2">
                     <nav>
                         <ul class="mid-nav g-nav">
                             <li class="u-d-none-lg">
@@ -102,58 +102,6 @@
         </div>
     </div>
     <!-- Responsive-Buttons /- -->
-    <!-- Mini Cart -->
-    <div class="mini-cart-wrapper">
-        <div class="mini-cart">
-            <div class="mini-cart-header">
-                YOUR CART
-                <button type="button" class="button ion ion-md-close" id="mini-cart-close"></button>
-            </div>
-            <ul class="mini-cart-list">
-                <li class="clearfix">
-                    <a href="single-product.html">
-                        <img src="images/product/product@1x.jpg" alt="Product">
-                        <span class="mini-item-name">Casual Hoodie Full Cotton</span>
-                        <span class="mini-item-price">$55.00</span>
-                        <span class="mini-item-quantity"> x 1 </span>
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="single-product.html">
-                        <img src="images/product/product@1x.jpg" alt="Product">
-                        <span class="mini-item-name">Black Rock Dress with High Jewelery Necklace</span>
-                        <span class="mini-item-price">$55.00</span>
-                        <span class="mini-item-quantity"> x 1 </span>
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="single-product.html">
-                        <img src="images/product/product@1x.jpg" alt="Product">
-                        <span class="mini-item-name">Xiaomi Note 2 Black Color</span>
-                        <span class="mini-item-price">$55.00</span>
-                        <span class="mini-item-quantity"> x 1 </span>
-                    </a>
-                </li>
-                <li class="clearfix">
-                    <a href="single-product.html">
-                        <img src="images/product/product@1x.jpg" alt="Product">
-                        <span class="mini-item-name">Dell Inspiron 15</span>
-                        <span class="mini-item-price">$55.00</span>
-                        <span class="mini-item-quantity"> x 1 </span>
-                    </a>
-                </li>
-            </ul>
-            <div class="mini-shop-total clearfix">
-                <span class="mini-total-heading float-left">Total:</span>
-                <span class="mini-total-price float-right">$220.00</span>
-            </div>
-            <div class="mini-action-anchors">
-                <a href="cart.html" class="cart-anchor">View Cart</a>
-                <a href="checkout.html" class="checkout-anchor">Checkout</a>
-            </div>
-        </div>
-    </div>
-    <!-- Mini Cart /- -->
     <!-- Bottom-Header -->
     <div class="full-layer-bottom-header">
         <div class="container">
@@ -161,133 +109,45 @@
                 <div class="col-lg-12">
                     <ul class="bottom-nav g-nav u-d-none-lg">
                         <li>
-                            <a href="custom-deal-page.html">New Arrivals
-                                <span class="superscript-label-new">NEW</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="custom-deal-page.html">Exclusive Deals
-                                <span class="superscript-label-hot">HOT</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="custom-deal-page.html">Flash Deals
-                            </a>
-                        </li>
-                        <li class="mega-position">
-                            <a>Pages
+                            <a>Jasa
                                 <i class="fas fa-chevron-down u-s-m-l-9"></i>
                             </a>
-                            <div class="mega-menu mega-3-colm">
-                                <ul>
-                                    <li class="menu-title">Home & Static Pages</li>
-                                    <li>
-                                        <a href="home.html" class="u-c-brand">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="contact.html">Contact</a>
-                                    </li>
-                                    <li>
-                                        <a href="faq.html">FAQ</a>
-                                    </li>
-                                    <li>
-                                        <a href="store-directory.html">Store Directory</a>
-                                    </li>
-                                    <li>
-                                        <a href="terms-and-conditions.html">Terms & Conditions</a>
-                                    </li>
-                                    <li>
-                                        <a href="404.html">404</a>
-                                    </li>
-                                    <li class="menu-title">Single Product Page</li>
-                                    <li>
-                                        <a href="single-product.html">Single Product Fullwidth</a>
-                                    </li>
-                                    <li class="menu-title">Blog</li>
-                                    <li>
-                                        <a href="blog.html">Blog Page</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-detail.html">Blog Details</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li class="menu-title">Ecommerce Pages</li>
-                                    <li>
-                                        <a href="shop-v2-sub-category.html">Shop</a>
-                                    </li>
-                                    <li>
-                                        <a href="cart.html">Cart</a>
-                                    </li>
-                                    <li>
-                                        <a href="checkout.html">Checkout</a>
-                                    </li>
-                                    <li>
-                                        <a href="account.html">My Account</a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.html">Wishlist</a>
-                                    </li>
-                                    <li>
-                                        <a href="track-order.html">Track your Order</a>
-                                    </li>
-                                    <li class="menu-title">Cart Variations</li>
-                                    <li>
-                                        <a href="cart-empty.html">Cart Ver 1 Empty</a>
-                                    </li>
-                                    <li>
-                                        <a href="cart.html">Cart Ver 2 Full</a>
-                                    </li>
-                                    <li class="menu-title">Wishlist Variations</li>
-                                    <li>
-                                        <a href="wishlist-empty.html">Wishlist Ver 1 Empty</a>
-                                    </li>
-                                    <li>
-                                        <a href="wishlist.html">Wishlist Ver 2 Full</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li class="menu-title">Shop Variations</li>
-                                    <li>
-                                        <a href="shop-v1-root-category.html">Shop Ver 1 Root Category</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-v2-sub-category.html">Shop Ver 2 Sub Category</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-v3-sub-sub-category.html">Shop Ver 3 Sub Sub Category</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-v4-filter-as-category.html">Shop Ver 4 Filter as Category</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-v5-product-not-found.html">Shop Ver 5 Product Not Found</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-v6-search-results.html">Shop Ver 6 Search Results</a>
-                                    </li>
-                                    <li class="menu-title">My Account Variation</li>
-                                    <li>
-                                        <a href="lost-password.html">Lost Your Password ?</a>
-                                    </li>
-                                    <li class="menu-title">Checkout Variation</li>
-                                    <li>
-                                        <a href="confirmation.html">Checkout Confirmation</a>
-                                    </li>
-                                    <li class="menu-title">Custom Deals Page</li>
-                                    <li>
-                                        <a href="custom-deal-page.html">Custom Deal Page</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            <ul class="g-dropdown" style="width:200px">
+                                <li>
+                                    <a href="cart.html">My Cart</a>
+                                </li>
+                                <li>
+                                    <a href="wishlist.html">My Wishlist</a>
+                                </li>
+                                <li>
+                                    <a href="checkout.html">Checkout</a>
+                                </li>
+                                <li>
+                                    <a href="account.html">Login / Signup</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
-                            <a href="custom-deal-page.html">Super Sale
-                                <span class="superscript-label-discount">-15%</span>
+                            <a>Print
+                                <i class="fas fa-chevron-down u-s-m-l-9"></i>
                             </a>
+                            <ul class="g-dropdown" style="width:200px">
+                                <li>
+                                    <a href="cart.html">My Cart</a>
+                                </li>
+                                <li>
+                                    <a href="wishlist.html">My Wishlist</a>
+                                </li>
+                                <li>
+                                    <a href="checkout.html">Checkout</a>
+                                </li>
+                                <li>
+                                    <a href="account.html">Login / Signup</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="custom-deal-page.html">Kontak Kami</a>
                         </li>
                     </ul>
                 </div>
