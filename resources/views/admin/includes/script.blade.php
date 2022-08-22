@@ -1,135 +1,101 @@
+<!-- Fonts and icons -->
+<script src="{{ asset('admin/js/plugin/webfont/webfont.min.js') }}"></script>
+<script>
+    WebFont.load({
+        google: {
+            "families": ["Open+Sans:300,400,600,700"]
+        },
+        custom: {
+            "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands"],
+            urls: ['{{ asset('admin/css/fonts.css') }}']
+        },
+        active: function() {
+            sessionStorage.fonts = true;
+        }
+    });
+</script>
 <!--   Core JS Files   -->
 <script src="{{ asset('admin/js/core/jquery.3.2.1.min.js') }}"></script>
 <script src="{{ asset('admin/js/core/popper.min.js') }}"></script>
 <script src="{{ asset('admin/js/core/bootstrap.min.js') }}"></script>
-
 <!-- jQuery UI -->
 <script src="{{ asset('admin/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('admin/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js') }}"></script>
-
 <!-- jQuery Scrollbar -->
 <script src="{{ asset('admin/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js') }}"></script>
-
-
+<!-- Moment JS -->
+<script src="{{ asset('admin/js/plugin/moment/moment.min.js') }}"></script>
 <!-- Chart JS -->
 <script src="{{ asset('admin/js/plugin/chart.js/chart.min.js') }}"></script>
-
 <!-- jQuery Sparkline -->
 <script src="{{ asset('admin/js/plugin/jquery.sparkline/jquery.sparkline.min.js') }}"></script>
-
 <!-- Chart Circle -->
 <script src="{{ asset('admin/js/plugin/chart-circle/circles.min.js') }}"></script>
-
 <!-- Datatables -->
 <script src="{{ asset('admin/js/plugin/datatables/datatables.min.js') }}"></script>
-
 <!-- Bootstrap Notify -->
 <script src="{{ asset('admin/js/plugin/bootstrap-notify/bootstrap-notify.min.js') }}"></script>
-
+<!-- Bootstrap Toggle -->
+<script src="{{ asset('admin/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js') }}"></script>
 <!-- jQuery Vector Maps -->
 <script src="{{ asset('admin/js/plugin/jqvmap/jquery.vmap.min.js') }}"></script>
 <script src="{{ asset('admin/js/plugin/jqvmap/maps/jquery.vmap.world.js') }}"></script>
-
+<!-- Google Maps Plugin -->
+<script src="{{ asset('admin/js/plugin/gmaps/gmaps.js') }}"></script>
 <!-- Sweet Alert -->
 <script src="{{ asset('admin/js/plugin/sweetalert/sweetalert.min.js') }}"></script>
+<!-- JS -->
+<script src="{{ asset('admin/js/ready.min.js') }}"></script>
+<!-- Login - Register -->
+<script src="{{ asset('admin/js/ready.js') }}"></script>
+<!-- Raja Ongkir Jquery -->
+<script src="{{ asset('admin/js/rajaongkir-jquery.js') }}"></script>
+<!-- Get Sub Category -->
+<script src="{{ asset('admin/js/app.js') }}"></script>
+<!-- TinyMCE5 -->
+<script src="{{ asset('vendor/tinyMCE5/jquery.tinymce.min.js') }}"></script>
+<script src="{{ asset('vendor/tinyMCE5/tinymce.min.js') }}"></script>
 
-<!-- Atlantis JS -->
-<script src="{{ asset('admin/js/atlantis.min.js') }}"></script>
-
-<!-- Atlantis DEMO methods, don't include it in your project! -->
-<script src="{{ asset('admin/js/setting-demo.js') }}"></script>
-<script src="{{ asset('admin/js/demo.js') }}"></script>
 <script>
-    Circles.create({
-        id:'circles-1',
-        radius:45,
-        value:60,
-        maxValue:100,
-        width:7,
-        text: 5,
-        colors:['#f1f1f1', '#FF9E27'],
-        duration:400,
-        wrpClass:'circles-wrp',
-        textClass:'circles-text',
-        styleWrapper:true,
-        styleText:true
-    })
+    $(document).ready(function() {
+        // Text Editor TinyMCE5
+        $(".markdown-input").tinymce({
+            relative_urls: false,
+            language: "en",
+            plugins: [
+                "advlist autolink lists link image charmap print preview hr anchor pagebreak",
+                "searchreplace wordcount visualblocks visualchars code fullscreen",
+                "insertdatetime media nonbreaking save table directionality",
+                "emoticons template paste textpattern",
+            ],
+            toolbar1: "fullscreen preview",
+            toolbar2:
+                "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image media",
+            file_picker_callback: function(callback, value, meta) {
+                let x = window.innerWidth || document.documentElement.clientWidth || document
+                    .getElementsByTagName('body')[0].clientWidth;
+                let y = window.innerHeight || document.documentElement.clientHeight || document
+                    .getElementsByTagName('body')[0].clientHeight;
 
-    Circles.create({
-        id:'circles-2',
-        radius:45,
-        value:70,
-        maxValue:100,
-        width:7,
-        text: 36,
-        colors:['#f1f1f1', '#2BB930'],
-        duration:400,
-        wrpClass:'circles-wrp',
-        textClass:'circles-text',
-        styleWrapper:true,
-        styleText:true
-    })
+                let cmsURL = /* route */ + '?editor=' + meta.fieldname;
+                if (meta.filetype == 'image') {
+                    cmsURL = cmsURL + "&type=Images";
+                } else {
+                    cmsURL = cmsURL + "&type=Files";
+                }
 
-    Circles.create({
-        id:'circles-3',
-        radius:45,
-        value:40,
-        maxValue:100,
-        width:7,
-        text: 12,
-        colors:['#f1f1f1', '#F25961'],
-        duration:400,
-        wrpClass:'circles-wrp',
-        textClass:'circles-text',
-        styleWrapper:true,
-        styleText:true
-    })
-
-    var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
-
-    var mytotalIncomeChart = new Chart(totalIncomeChart, {
-        type: 'bar',
-        data: {
-            labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
-            datasets : [{
-                label: "Total Income",
-                backgroundColor: '#ff9e27',
-                borderColor: 'rgb(23, 125, 255)',
-                data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
-            }],
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            legend: {
-                display: false,
-            },
-            scales: {
-                yAxes: [{
-                    ticks: {
-                        display: false //this will remove only the label
-                    },
-                    gridLines : {
-                        drawBorder: false,
-                        display : false
+                tinyMCE.activeEditor.windowManager.openUrl({
+                    url: cmsURL,
+                    title: 'Filemanager',
+                    width: x * 0.8,
+                    height: y * 0.8,
+                    resizable: "yes",
+                    close_previous: "no",
+                    onMessage: (api, message) => {
+                        callback(message.content);
                     }
-                }],
-                xAxes : [ {
-                    gridLines : {
-                        drawBorder: false,
-                        display : false
-                    }
-                }]
-            },
-        }
-    });
-
-    $('#lineChart').sparkline([105,103,123,100,95,105,115], {
-        type: 'line',
-        height: '70',
-        width: '100%',
-        lineWidth: '2',
-        lineColor: '#ffa534',
-        fillColor: 'rgba(255, 165, 52, .14)'
+                });
+            }
+        });
     });
 </script>

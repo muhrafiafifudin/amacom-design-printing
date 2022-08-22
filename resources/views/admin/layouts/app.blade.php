@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<title> @yield('title') </title>
-	<meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
-	<link rel="icon" href="{{ asset('admin/img/icon.ico') }}" type="image/x-icon"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> @yield('title') </title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <link rel="icon" href="{{ asset('admin/img/icon.ico') }}" type="image/x-icon" />
 
-	<!-- Fonts and icons -->
-	<script src="{{ asset('admin/js/plugin/webfont/webfont.min.js') }}"></script>
-	<script>
-		WebFont.load({
-			google: {"families":["Lato:300,400,700,900"]},
-			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['admin/css/fonts.min.css']},
-			active: function() {
-				sessionStorage.fonts = true;
-			}
-		});
-	</script>
-
-	@include('admin.includes.style')
+    @include('admin.includes.style')
 </head>
-<body>
-	<div class="wrapper">
 
-        <!-- Header -->
-		@include('admin.includes.header')
-        <!-- End Header -->
+<body data-background-color="bg3">
+    <div class="wrapper">
+        <!--
+   Tip 1: You can change the background color of the main header using: data-background-color="blue | purple | light-blue | green | orange | red"
+  -->
+        <div class="main-header" data-background-color="dark">
+            <!-- Logo Header -->
+            @include('admin.includes.header-logo')
+            <!-- End Logo Header -->
 
-		<!-- Sidebar -->
-		@include('admin.includes.sidebar')
-		<!-- End Sidebar -->
+            <!-- Header -->
+            @include('admin.includes.header')
+            <!-- End Header -->
+        </div>
+
+        <!-- Sidebar -->
+        @include('admin.includes.sidebar')
+        <!-- End Sidebar -->
 
         <!-- Content -->
-		@yield('content')
+        @yield('content')
         <!-- End Content -->
 
-	</div>
+    </div>
 
     @include('admin.includes.script')
+
+    @stack('scripts')
 </body>
+
 </html>
