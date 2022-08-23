@@ -29,13 +29,13 @@
                     <h4 class="text-section">Pelanggan & Toko</h4>
                 </li>
                 <li class="nav-item {{ request()->is('admin/pelanggan') ? 'active' : '' }}">
-                    <a href="{{ route('admin.pelanggan.index') }}">
+                    <a href="#">
                         <i class="fas fa-users"></i>
                         <p>Pelanggan</p>
                     </a>
                 </li>
                 <li class="nav-item {{ request()->is('admin/profil-toko') ? 'active' : '' }}">
-                    <a href="{{ route('admin.profil-toko.index') }}">
+                    <a href="#">
                         <i class="fas fa-store"></i>
                         <p>Profil Toko</p>
                     </a>
@@ -55,12 +55,12 @@
                     <div class="collapse {{ request()->is('admin/kategori', 'admin/sub-kategori') ? 'show' : '' }}" id="forms">
                         <ul class="nav nav-collapse">
                             <li class="{{ request()->is('admin/kategori') ? 'active' : '' }}">
-                                <a href="{{ route('admin.kategori.index') }}">
+                                <a href="#">
                                     <span class="sub-item">Kategori</span>
                                 </a>
                             </li>
                             <li class="{{ request()->is('admin/sub-kategori') ? 'active' : '' }}">
-                                <a href="{{ route('admin.sub-kategori.index') }}">
+                                <a href="#">
                                     <span class="sub-item">Sub Kategori</span>
                                 </a>
                             </li>
@@ -68,23 +68,11 @@
                     </div>
                 </li>
                 <li class="nav-item {{ request()->is('admin/produk') ? 'active' : '' }}">
-                    <a href="{{ route('admin.produk.index') }}">
+                    <a href="#">
                         <i class="fas fa-cube"></i>
                         <p>Produk</p>
                     </a>
                 </li>
-                {{-- <li class="nav-section">
-                    <span class="sidebar-mini-icon">
-                        <i class="fa fa-ellipsis-h"></i>
-                    </span>
-                    <h4 class="text-section">Artikel</h4>
-                </li>
-                <li class="nav-item {{ request()->is('admin/artikel') ? 'active' : '' }}">
-                    <a href="{{ route('admin.artikel.index') }}">
-                        <i class="fas fa-newspaper"></i>
-                        <p>Artikel</p>
-                    </a>
-                </li> --}}
                 <li class="nav-section">
                     <span class="sidebar-mini-icon">
                         <i class="fa fa-ellipsis-h"></i>
@@ -92,13 +80,13 @@
                     <h4 class="text-section">Transaksi</h4>
                 </li>
                 <li class="nav-item {{ request()->is('admin/transaksi') ? 'active' : '' }}">
-                    <a href="{{ route('admin.transaksi.index') }}">
+                    <a href="#">
                         <i class="far fa-money-bill-alt"></i>
                         <p>Transaksi</p>
                     </a>
                 </li>
                 <li class="nav-item {{ request()->is('admin/riwayat-transaksi') ? 'active' : '' }}">
-                    <a href="{{ route('admin.transaksi.history') }}">
+                    <a href="#">
                         <i class="fas fa-history"></i>
                         <p>Riwayat Transaksi</p>
                     </a>
@@ -110,7 +98,7 @@
                     <h4 class="text-section">Laporan</h4>
                 </li>
                 <li class="nav-item {{ request()->is('admin/report-transaction') ? 'active' : '' }}">
-                    <a href="{{ route('admin.transaksi.report') }}">
+                    <a href="#">
                         <i class="fas fa-clipboard-check"></i>
                         <p>Laporan Transaksi</p>
                     </a>
