@@ -15,6 +15,10 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
+            $table->string('type')->comment('0 for Service and 1 for Print');
+            $table->string('category');
+            $table->string('slug');
+            $table->tinyInteger('total_product')->default(0);
             $table->timestamps();
         });
     }

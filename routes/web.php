@@ -45,7 +45,7 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         // Customer
         // Route::resource('pelanggan', 'CustomerController');
         // Category
-        // Route::resource('kategori', 'CategoryController');
+        Route::resource('kategori', 'CategoryController');
         // Sub Category
         // Route::resource('sub-kategori', 'SubCategoryController');
         // Product

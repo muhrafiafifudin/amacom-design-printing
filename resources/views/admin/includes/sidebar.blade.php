@@ -46,26 +46,11 @@
                     </span>
                     <h4 class="text-section">Produk</h4>
                 </li>
-                <li class="nav-item {{ request()->is('admin/kategori', 'admin/sub-kategori') ? 'active' : '' }}">
-                    <a data-toggle="collapse" href="#forms">
+                <li class="nav-item {{ request()->is('admin/produk') ? 'active' : '' }}">
+                    <a href="{{ route('admin.kategori.index') }}">
                         <i class="fas fa-cubes"></i>
                         <p>Kategori</p>
-                        <span class="caret"></span>
                     </a>
-                    <div class="collapse {{ request()->is('admin/kategori', 'admin/sub-kategori') ? 'show' : '' }}" id="forms">
-                        <ul class="nav nav-collapse">
-                            <li class="{{ request()->is('admin/kategori') ? 'active' : '' }}">
-                                <a href="#">
-                                    <span class="sub-item">Kategori</span>
-                                </a>
-                            </li>
-                            <li class="{{ request()->is('admin/sub-kategori') ? 'active' : '' }}">
-                                <a href="#">
-                                    <span class="sub-item">Sub Kategori</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </li>
                 <li class="nav-item {{ request()->is('admin/produk') ? 'active' : '' }}">
                     <a href="#">
@@ -83,12 +68,6 @@
                     <a href="#">
                         <i class="far fa-money-bill-alt"></i>
                         <p>Transaksi</p>
-                    </a>
-                </li>
-                <li class="nav-item {{ request()->is('admin/riwayat-transaksi') ? 'active' : '' }}">
-                    <a href="#">
-                        <i class="fas fa-history"></i>
-                        <p>Riwayat Transaksi</p>
                     </a>
                 </li>
                 <li class="nav-section">
