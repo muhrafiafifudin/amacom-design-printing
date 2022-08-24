@@ -1,25 +1,7 @@
 <footer class="footer">
     <div class="container">
-        <!-- Outer-Footer -->
-        <div class="outer-footer-wrapper u-s-p-y-80">
-            <h6>
-                For special offers and other discount information
-            </h6>
-            <h1>
-                Subscribe to our Newsletter
-            </h1>
-            <p>
-                Subscribe to the mailing list to receive updates on promotions, new arrivals, discount and coupons.
-            </p>
-            <form class="newsletter-form">
-                <label class="sr-only" for="newsletter-field">Enter your Email</label>
-                <input type="text" id="newsletter-field" placeholder="Your Email Address">
-                <button type="submit" class="button">SUBMIT</button>
-            </form>
-        </div>
-        <!-- Outer-Footer /- -->
         <!-- Mid-Footer -->
-        <div class="mid-footer-wrapper u-s-p-b-80">
+        <div class="mid-footer-wrapper u-s-p-b-80 u-s-p-y-100">
             <div class="row">
                 <div class="col-lg-3 col-md-3 col-sm-12">
                     <div class="footer-list">
