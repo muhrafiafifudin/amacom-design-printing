@@ -40,14 +40,14 @@
                     </span>
                     <h4 class="text-section">Produk</h4>
                 </li>
-                <li class="nav-item {{ request()->is('admin/produk') ? 'active' : '' }}">
+                <li class="nav-item {{ request()->is('admin/kategori') ? 'active' : '' }}">
                     <a href="{{ route('admin.kategori.index') }}">
                         <i class="fas fa-cubes"></i>
                         <p>Kategori</p>
                     </a>
                 </li>
                 <li class="nav-item {{ request()->is('admin/produk') ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="{{ route('admin.produk.index') }}">
                         <i class="fas fa-cube"></i>
                         <p>Produk</p>
                     </a>
