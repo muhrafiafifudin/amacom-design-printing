@@ -59,7 +59,6 @@
                                             <th scope="col">No.</th>
                                             <th scope="col">Jenis Pekerjaan</th>
                                             <th scope="col">Nama Kategori</th>
-                                            <th scope="col">Jumlah Produk</th>
                                             <th scope="col">Aksi</th>
                                         </tr>
                                     </thead>
@@ -70,7 +69,6 @@
                                                 <td>{{ $no++ }}</td>
                                                 <td>{{ $category->type == 0 ? 'Jasa' : 'Print' }}</td>
                                                 <td>{{ $category->category }}</td>
-                                                <td>{{ $category->total_product }}</td>
                                                 <td>
                                                     <form action="{{ route('admin.kategori.destroy', $category->id) }}" method="POST">
                                                         @csrf

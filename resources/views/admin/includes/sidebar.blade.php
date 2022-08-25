@@ -26,18 +26,12 @@
                     <span class="sidebar-mini-icon">
                         <i class="fa fa-ellipsis-h"></i>
                     </span>
-                    <h4 class="text-section">Pelanggan & Toko</h4>
+                    <h4 class="text-section">Pelanggan</h4>
                 </li>
                 <li class="nav-item {{ request()->is('admin/pelanggan') ? 'active' : '' }}">
                     <a href="#">
                         <i class="fas fa-users"></i>
                         <p>Pelanggan</p>
-                    </a>
-                </li>
-                <li class="nav-item {{ request()->is('admin/profil-toko') ? 'active' : '' }}">
-                    <a href="#">
-                        <i class="fas fa-store"></i>
-                        <p>Profil Toko</p>
                     </a>
                 </li>
                 <li class="nav-section">
