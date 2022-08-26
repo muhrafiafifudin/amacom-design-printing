@@ -40,14 +40,12 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         // Dashboard
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
-        // Customer
-        // Route::resource('pelanggan', 'CustomerController');
         // Category
         Route::resource('kategori', 'CategoryController');
         // Product
         Route::resource('produk', 'ProductController');
         // Transaction
-        // Route::get('transaksi', 'TransactionController@index')->name('transaksi.index');
+        Route::get('transaksi', 'TransactionController@index')->name('transaksi.index');
         // Route::get('riwayat-transaksi', 'TransactionController@transactionHistory')->name('transaksi.history');
         // Route::get('detail-transaksi/{id}', 'TransactionController@transactionDetail');
         // Report

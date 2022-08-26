@@ -59,7 +59,7 @@
                     <h4 class="text-section">Transaksi</h4>
                 </li>
                 <li class="nav-item {{ request()->is('admin/transaksi') ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="{{ route('admin.transaksi.index') }}">
                         <i class="far fa-money-bill-alt"></i>
                         <p>Transaksi</p>
                     </a>

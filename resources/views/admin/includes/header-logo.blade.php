@@ -1,6 +1,6 @@
 <div class="logo-header">
-    <a href="index.html" class="logo">
-        <img src="{{ asset('users/img/logo-nasa.png') }}" alt="navbar brand" class="navbar-brand" width="150px">
+    <a href="#" class="logo mt-2>">
+        <h1>AMACOM</h1>
     </a>
     <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
         data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">
