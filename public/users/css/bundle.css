@@ -4137,7 +4137,7 @@ body {
 /* 23.2 Page-Bar-Options */
 .page-bar {
     border-bottom: 1px solid #dcdcdd;
-    margin: 0 0 60px;
+    margin: 0 0 20px;
     padding: 15px 0;
     width: 100%;
 }
@@ -4167,9 +4167,6 @@ body {
 }
 
 /* 23.3 Shop-Grid-View */
-.grid-style .product-item {
-    display: flex;
-}
 
 .grid-style .item {
     margin: 0 0 30px;
