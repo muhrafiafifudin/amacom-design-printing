@@ -109,45 +109,31 @@
                 <div class="col-lg-12">
                     <ul class="bottom-nav g-nav u-d-none-lg">
                         <li>
-                            <a>Jasa
+                            <a href="{{ url('produk/' . $services->type ) }}">Jasa
                                 <i class="fas fa-chevron-down u-s-m-l-9"></i>
                             </a>
                             <ul class="g-dropdown" style="width:200px">
-                                <li>
-                                    <a href="cart.html">My Cart</a>
-                                </li>
-                                <li>
-                                    <a href="wishlist.html">My Wishlist</a>
-                                </li>
-                                <li>
-                                    <a href="checkout.html">Checkout</a>
-                                </li>
-                                <li>
-                                    <a href="account.html">Login / Signup</a>
-                                </li>
+                                @foreach ($nav_services as $service)
+                                    <li>
+                                        <a href="{{ url('produk/' . $service->type . '/' . $service->slug ) }}">{{ $service->category }}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </li>
                         <li>
-                            <a>Print
+                            <a href="{{ url('produk/' . $print->type ) }}">Print
                                 <i class="fas fa-chevron-down u-s-m-l-9"></i>
                             </a>
                             <ul class="g-dropdown" style="width:200px">
-                                <li>
-                                    <a href="cart.html">My Cart</a>
-                                </li>
-                                <li>
-                                    <a href="wishlist.html">My Wishlist</a>
-                                </li>
-                                <li>
-                                    <a href="checkout.html">Checkout</a>
-                                </li>
-                                <li>
-                                    <a href="account.html">Login / Signup</a>
-                                </li>
+                                @foreach ($nav_print as $print)
+                                    <li>
+                                        <a href="{{ url('produk/' . $service->type . '/' . $print->slug ) }}">{{ $print->category }}</a>
+                                    </li>
+                                @endforeach
                             </ul>
                         </li>
                         <li>
-                            <a href="custom-deal-page.html">Kontak Kami</a>
+                            <a href="#">Kontak Kami</a>
                         </li>
                     </ul>
                 </div>

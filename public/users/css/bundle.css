@@ -1194,7 +1194,7 @@ body {
 .g-dropdown {
     background: #ffffff none repeat scroll 0 0;
     box-shadow: 0 1px 2px rgba(86, 86, 90, 0.5);
-    padding: 20px;
+    padding: 10px 20px;
     position: absolute;
     text-align: left;
     top: 120%;

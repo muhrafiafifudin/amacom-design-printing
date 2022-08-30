@@ -8,14 +8,17 @@
 <div class="page-style-a">
     <div class="container">
         <div class="page-intro">
-            <h2>{{ $categories->type == 0 ? 'Jasa' : 'Print' }}</h2>
+            <h2>{{ $productCategories->type == 0 ? 'Jasa' : 'Print' }}</h2>
             <ul class="bread-crumb">
                 <li class="has-separator">
                     <i class="ion ion-md-home"></i>
                     <a href="#">Home</a>
                 </li>
+                <li class="has-separator">
+                    <a href="#">{{ $productCategories->type == 0 ? 'Jasa' : 'Print' }}</a>
+                </li>
                 <li class="is-marked">
-                    <a href="#">{{ $categories->type == 0 ? 'Jasa' : 'Print' }}</a>
+                    <a href="#">{{ $productCategories->category }}</a>
                 </li>
             </ul>
         </div>

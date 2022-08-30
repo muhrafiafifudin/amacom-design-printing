@@ -13,16 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('users.pages.product.product-detail');
-});
+// Route::get('/', function () {
+//     return view('users.pages.product.product');
+// });
 
-Route::get('/dashboard', function () {
-    return view('users.pages.home');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('users.pages.home');
+// })->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
 
+// Dashboard
+Route::get('/', 'DashboardController@index');
+// Product
+Route::get('produk/{type}', 'ProductController@product');
+Route::get('produk/{type}/{categorySlug}', 'ProductController@productCategory');
+Route::get('produk/detail/{productSlug}', 'ProductController@productDetail');
 
 // User Route
 
@@ -46,7 +52,6 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::resource('produk', 'ProductController');
         // Transaction
         Route::get('transaksi', 'TransactionController@index')->name('transaksi.index');
-        // Route::get('riwayat-transaksi', 'TransactionController@transactionHistory')->name('transaksi.history');
         // Route::get('detail-transaksi/{id}', 'TransactionController@transactionDetail');
         // Report
         // Route::get('report-transaction', 'TransactionController@reportTransaction')->name('transaksi.report');
