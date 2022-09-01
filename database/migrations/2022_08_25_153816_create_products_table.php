@@ -20,7 +20,7 @@ class CreateProductsTable extends Migration
             $table->tinyInteger('categories_id');
             $table->text('description');
             $table->bigInteger('price');
-            $table->string('slug');
+            $table->string('products_slug');
             $table->timestamps();
         });
     }

@@ -21,7 +21,7 @@ class ProductSeeder extends Seeder
                 'categories_id' => 1,
                 'description' => 'Menyediakan jasa desain untuk brosur undangan',
                 'price' => 35000.00,
-                'slug' => 'brosur',
+                'products_slug' => 'brosur',
             ),
             array(
                 'name' => 'Menu Makanan',
@@ -29,7 +29,7 @@ class ProductSeeder extends Seeder
                 'categories_id' => 1,
                 'description' => 'Menyediakan jasa desain untuk menu makanan',
                 'price' => 15000.00,
-                'slug' => 'menu-makanan',
+                'products_slug' => 'menu-makanan',
             ),
             array(
                 'name' => 'Print Warna',
@@ -37,7 +37,7 @@ class ProductSeeder extends Seeder
                 'categories_id' => 3,
                 'description' => 'Menyediakan cetak warna',
                 'price' => 1000.00,
-                'slug' => 'print-warna',
+                'products_slug' => 'print-warna',
             ),
             array(
                 'name' => 'Print Sertifikat',
@@ -45,7 +45,7 @@ class ProductSeeder extends Seeder
                 'categories_id' => 3,
                 'description' => 'Menyediakan cetak sertifikat',
                 'price' => 5000.00,
-                'slug' => 'print-sertifikat',
+                'products_slug' => 'print-sertifikat',
             ),
         ));
     }

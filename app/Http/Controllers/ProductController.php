@@ -33,8 +33,14 @@ class ProductController extends Controller
         }
     }
 
-    public function productDetail()
+    public function productDetail($productSlug)
     {
-        //
+        if (Product::where('products_slug', $productSlug)->exists()) {
+            $products = Product::where('products_slug', $productSlug)->first();
+
+            return view('users.pages.product.product-detail', compact('products'));
+        } else {
+            return view('users.pages.product.product');
+        }
     }
 }

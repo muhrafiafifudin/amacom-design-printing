@@ -63,7 +63,7 @@
                         <div class="product-item col-lg-3">
                             <div class="item">
                                 <div class="image-container">
-                                    <a class="item-img-wrapper-link" href="single-product.html">
+                                    <a class="item-img-wrapper-link" href="{{ url('produk-detail/' . $product->products_slug) }}">
                                         <img class="img-fluid" src="users/images/product/product@3x.jpg" alt="Product">
                                     </a>
                                 </div>
@@ -81,7 +81,7 @@
                                             </li>
                                         </ul>
                                         <h6 class="item-title">
-                                            <a href="single-product.html">{{ $product->name }}</a>
+                                            <a href="{{ url('produk-detail/' . $product->products_slug) }}">{{ $product->name }}</a>
                                         </h6>
                                         <div class="item-description">
                                             <p>This hoodie is full cotton. It includes a muff sewn onto the lower front, and (usually) a drawstring to adjust the hood opening. Throughout the U.S., it is common for middle-school, high-school, and college students to wear this sweatshirts—with or without hoods—that display their respective school names or mascots across the chest, either as part of a uniform or personal preference.
@@ -90,7 +90,7 @@
                                     </div>
                                     <div class="price-template">
                                         <div class="item-new-price">
-                                            {{ $product->price }}
+                                            Rp. {{ number_format($product->price, 2, ',', '.') }}
                                         </div>
                                     </div>
                                 </div>

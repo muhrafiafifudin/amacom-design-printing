@@ -28,7 +28,7 @@ Route::get('/', 'DashboardController@index');
 // Product
 Route::get('produk/{type}', 'ProductController@product');
 Route::get('produk/{type}/{categorySlug}', 'ProductController@productCategory');
-Route::get('produk/detail/{productSlug}', 'ProductController@productDetail');
+Route::get('produk-detail/{productSlug}', 'ProductController@productDetail');
 
 // User Route
 
