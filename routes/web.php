@@ -31,7 +31,12 @@ Route::get('produk/{type}/{categorySlug}', 'ProductController@productCategory');
 Route::get('produk-detail/{productSlug}', 'ProductController@productDetail');
 
 // User Route
-
+Route::middleware(['auth'])->group(function () {
+    // Dashboard
+    Route::get('dashboard', 'DashboardController@index');
+    // Order
+    Route::post('order', 'CheckoutController@placeorder')->name('checkout.placeorder');
+});
 
 // Admin Route
 Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {

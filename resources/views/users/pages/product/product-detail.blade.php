@@ -39,7 +39,7 @@
                     <div class="section-1-title-breadcrumb-rating">
                         <div class="product-title">
                             <h1>
-                                <a href="single-product.html">Casual Hoodie Full Cotton</a>
+                                <a href="single-product.html">{{ $products->name }}</a>
                             </h1>
                         </div>
                         <ul class="bread-crumb">
@@ -56,24 +56,17 @@
                                 <a href="shop-v3-sub-sub-category.html">Hoodies</a>
                             </li>
                         </ul>
-                        <div class="product-rating">
-                            <div class='star' title="4.5 out of 5 - based on 23 Reviews">
-                                <span style='width:67px'></span>
-                            </div>
-                            <span>(23)</span>
-                        </div>
                     </div>
                     <div class="section-2-short-description u-s-p-y-14">
-                        <h6 class="information-heading u-s-m-b-8">Description:</h6>
-                        <p>This hoodie is full cotton. It includes a muff sewn onto the lower front, and (usually) a drawstring to adjust the hood opening. Throughout the U.S., it is common for middle-school, high-school, and college students to wear this sweatshirts—with or without hoods—that display their respective school names or mascots across the chest, either as part of a uniform or personal preference.
-                        </p>
+                        <h6 class="information-heading u-s-m-b-8">Deskripsi :</h6>
+                        <p>{{ $products->description }}</p>
                     </div>
                     <div class="section-3-price-original-discount u-s-p-y-14">
                         <div class="price">
-                            <h4>$55.00</h4>
+                            <h4>Rp. {{ number_format($products->price, 2, ',', '.') }}</h4>
                         </div>
                     </div>
-                    <div class="section-6-social-media-quantity-actions u-s-p-y-14">
+                    <div class="section-6-social-media-quantity-actions">
                         <form action="#" class="post-form">
                             <div class="quantity-wrapper u-s-m-b-22">
                                 <span>Quantity:</span>
@@ -83,10 +76,19 @@
                                     <a class="minus-a" data-min="1">&#45;</a>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                <input type="file" class="form-control" name="file" placeholder="Masukkan File ..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone_number">Nomor Telepon</label>
+                                <input type="text" class="form-control" name="phone_number" placeholder="Masukkan Nomor Telepon ..." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="note">Catatan</label>
+                                <textarea class="form-control" name="note" id="" cols="30" rows="10"></textarea>
+                            </div>
                             <div>
-                                <button class="button button-outline-secondary" type="submit">Add to cart</button>
-                                <button class="button button-outline-secondary far fa-heart u-s-m-l-6"></button>
-                                <button class="button button-outline-secondary far fa-envelope u-s-m-l-6"></button>
+                                <button class="button button-outline-secondary" type="submit">Pesan</button>
                             </div>
                         </form>
                     </div>
