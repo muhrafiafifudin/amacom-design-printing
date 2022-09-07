@@ -12,4 +12,14 @@ class Transaction extends Model
     protected $table = 'transactions';
 
     protected $guarded = [];
+
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'users_id');
+    }
+
+    public function products()
+    {
+        return $this->belongsTo(Product::class, 'products_id');
+    }
 }

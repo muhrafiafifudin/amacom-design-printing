@@ -36,6 +36,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('dashboard', 'DashboardController@index');
     // Order
     Route::post('order', 'CheckoutController@placeorder')->name('checkout.placeorder');
+    // Detail Order
+    Route::get('detail-order/{orderNumber}', 'CheckoutController@detailOrder');
 });
 
 // Admin Route

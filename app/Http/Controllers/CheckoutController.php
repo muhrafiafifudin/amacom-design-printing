@@ -19,7 +19,6 @@ class CheckoutController extends Controller
             $file->move($destinationPath, $profileImage);
             $transaction->file = $profileImage;
         }
-        dd($transaction->file);
 
         $transaction->phone_number = $request->phone_number;
         $transaction->products_id = $request->products_id;
@@ -28,5 +27,14 @@ class CheckoutController extends Controller
         $transaction->order_number = rand(0000000000, 9999999999);
         $transaction->note = $request->note;
         $transaction->save();
+
+        return redirect('detail-order/' . $transaction->order_number)->with('success', 'Order Placed Successfully');
+    }
+
+    public function detailOrder($order_number)
+    {
+        $transactions = Transaction::where('order_number', $order_number)->first();
+
+        return view('users.pages.invoice', compact('transactions'));
     }
 }
