@@ -67,11 +67,17 @@
                         </div>
                     </div>
                     <div class="section-6-social-media-quantity-actions">
-                        <form action="#" class="post-form">
+                        <form action="{{ route('checkout.placeorder') }}" class="post-form" method="POST" enctype="multipart/form-data">
+                            @csrf
+                            @method('POST')
+
+                            <input type="hidden" name="products_id" value="{{ $products->id }}">
+                            <input type="hidden" name="price" value="{{ $products->price }}">
+
                             <div class="quantity-wrapper u-s-m-b-22">
                                 <span>Quantity:</span>
                                 <div class="quantity">
-                                    <input type="text" class="quantity-text-field" value="1">
+                                    <input type="text" class="quantity-text-field" value="1" name="products_qty">
                                     <a class="plus-a" data-max="1000">&#43;</a>
                                     <a class="minus-a" data-min="1">&#45;</a>
                                 </div>
@@ -87,6 +93,7 @@
                                 <label for="note">Catatan</label>
                                 <textarea class="form-control" name="note" id="" cols="30" rows="10"></textarea>
                             </div>
+
                             <div>
                                 <button class="button button-outline-secondary" type="submit">Pesan</button>
                             </div>
