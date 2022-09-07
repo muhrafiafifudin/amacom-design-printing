@@ -29,7 +29,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <!-- Product-zoom-area -->
                 <div class="zoom-area">
-                    <img id="zoom-pro" class="img-fluid" src="users/images/product/product@4x.jpg" data-zoom-image="users/images/product/product@4x.jpg" alt="Zoom Image">
+                    <img id="zoom-pro" class="img-fluid" src="{{ asset('admin/img/product/' . $products->images) }}" data-zoom-image="users/images/product/product@4x.jpg" alt="Zoom Image">
                 </div>
                 <!-- Product-zoom-area /- -->
             </div>
@@ -39,7 +39,7 @@
                     <div class="section-1-title-breadcrumb-rating">
                         <div class="product-title">
                             <h1>
-                                <a href="single-product.html">{{ $products->name }}</a>
+                                <a href="#">{{ $products->name }}</a>
                             </h1>
                         </div>
                         <ul class="bread-crumb">

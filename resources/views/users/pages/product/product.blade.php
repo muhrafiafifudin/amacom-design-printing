@@ -64,7 +64,7 @@
                             <div class="item">
                                 <div class="image-container">
                                     <a class="item-img-wrapper-link" href="{{ url('produk-detail/' . $product->products_slug) }}">
-                                        <img class="img-fluid" src="users/images/product/product@3x.jpg" alt="Product">
+                                        <img class="img-fluid" src="{{ asset('admin/img/product/' . $product->images) }}" alt="Product">
                                     </a>
                                 </div>
                                 <div class="item-content">
@@ -83,19 +83,12 @@
                                         <h6 class="item-title">
                                             <a href="{{ url('produk-detail/' . $product->products_slug) }}">{{ $product->name }}</a>
                                         </h6>
-                                        <div class="item-description">
-                                            <p>This hoodie is full cotton. It includes a muff sewn onto the lower front, and (usually) a drawstring to adjust the hood opening. Throughout the U.S., it is common for middle-school, high-school, and college students to wear this sweatshirts—with or without hoods—that display their respective school names or mascots across the chest, either as part of a uniform or personal preference.
-                                            </p>
-                                        </div>
                                     </div>
                                     <div class="price-template">
                                         <div class="item-new-price">
                                             Rp. {{ number_format($product->price, 2, ',', '.') }}
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tag new">
-                                    <span>NEW</span>
                                 </div>
                             </div>
                         </div>

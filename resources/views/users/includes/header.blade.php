@@ -73,12 +73,12 @@
                     <nav>
                         <ul class="mid-nav g-nav">
                             <li class="u-d-none-lg">
-                                <a href="home.html">
+                                <a href="{{ url('/') }}">
                                     <i class="ion ion-md-home u-c-brand"></i>
                                 </a>
                             </li>
                             <li class="u-d-none-lg">
-                                <a href="wishlist.html">
+                                <a href="#">
                                     <i class="far fa-heart"></i>
                                 </a>
                             </li>

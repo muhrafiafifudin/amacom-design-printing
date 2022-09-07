@@ -1563,7 +1563,6 @@ body {
 
 .what-product-is {
     margin-bottom: 18px;
-    border-bottom: 1px solid #dcdcdd;
 }
 
 .item .bread-crumb > li {
@@ -2726,9 +2725,6 @@ body {
 }
 
 /* 9.5 Site-Priorities */
-.app-priority .priority-wrapper {
-    border-bottom: 1px solid #dcdcdd;
-}
 .app-priority .priority-wrapper .single-item-wrapper {
     text-align: center;
 }

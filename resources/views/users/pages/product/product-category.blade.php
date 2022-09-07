@@ -67,7 +67,7 @@
                             <div class="item">
                                 <div class="image-container">
                                     <a class="item-img-wrapper-link" href="{{ url('produk-detail/' . $product->products_slug) }}">
-                                        <img class="img-fluid" src="users/images/product/product@3x.jpg" alt="Product">
+                                        <img class="img-fluid" src="{{ asset('admin/img/product/' . $product->images) }}" alt="Product">
                                     </a>
                                 </div>
                                 <div class="item-content">
