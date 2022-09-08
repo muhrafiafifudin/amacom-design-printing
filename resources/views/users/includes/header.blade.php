@@ -18,35 +18,49 @@
                 </ul>
             </nav>
             <nav>
-                <ul class="secondary-nav g-nav">
-                    <li>
-                        <a>My Account
-                            <i class="fas fa-chevron-down u-s-m-l-9"></i>
-                        </a>
-                        <ul class="g-dropdown" style="width:200px">
+                @if (Route::has('login'))
+                    <ul class="secondary-nav g-nav">
+                        @auth
                             <li>
-                                <a href="cart.html">
-                                    <i class="fas fa-cog u-s-m-r-9"></i>
-                                    My Cart</a>
+                                <a>Selamat Datang, {{ Auth::user()->name }}
+                                    <i class="fas fa-chevron-down u-s-m-l-9"></i>
+                                </a>
+                                <ul class="g-dropdown" style="width:200px">
+                                    <li>
+                                        <a href="{{ url('akun/pesanan') }}">
+                                            <i class="far fa-check-circle u-s-m-r-9"></i>
+                                            Pesanan
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                            <i class="fas fa-sign-in-alt u-s-m-r-9"></i>
+                                            Logout
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
                             </li>
+                        @else
                             <li>
-                                <a href="wishlist.html">
-                                    <i class="far fa-heart u-s-m-r-9"></i>
-                                    My Wishlist</a>
+                                <a>My Account
+                                    <i class="fas fa-chevron-down u-s-m-l-9"></i>
+                                </a>
+                                <ul class="g-dropdown" style="width:200px">
+                                    <li>
+                                        <a href="{{ route('login') }}">
+                                            <i class="fas fa-sign-in-alt u-s-m-r-9"></i>
+                                            Login / Signup
+                                        </a>
+                                    </li>
+                                </ul>
                             </li>
-                            <li>
-                                <a href="checkout.html">
-                                    <i class="far fa-check-circle u-s-m-r-9"></i>
-                                    Checkout</a>
-                            </li>
-                            <li>
-                                <a href="{{ route('login') }}">
-                                    <i class="fas fa-sign-in-alt u-s-m-r-9"></i>
-                                    Login / Signup</a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
+                        @endauth
+                    </ul>
+                @endif
             </nav>
         </div>
     </div>

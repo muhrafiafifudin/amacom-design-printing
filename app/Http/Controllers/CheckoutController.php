@@ -37,4 +37,9 @@ class CheckoutController extends Controller
 
         return view('users.pages.invoice', compact('transactions'));
     }
+
+    public function confirmation()
+    {
+        return view('users.pages.confirmation');
+    }
 }

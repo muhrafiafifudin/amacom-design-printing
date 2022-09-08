@@ -38,6 +38,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('order', 'CheckoutController@placeorder')->name('checkout.placeorder');
     // Detail Order
     Route::get('detail-order/{orderNumber}', 'CheckoutController@detailOrder');
+    // My Account
+    Route::get('akun/pesanan', 'MyAccountController@order');
+    Route::get('akun/detail-pesanan/{orderNumber}', 'MyAccountController@orderDetail');
+    // Confirmation
+    Route::get('konfirmasi', 'CheckoutController@confirmation');
 });
 
 // Admin Route

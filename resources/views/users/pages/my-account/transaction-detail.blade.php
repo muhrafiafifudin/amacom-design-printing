@@ -8,17 +8,17 @@
 <div class="page-style-a">
     <div class="container">
         <div class="page-intro">
-            <h2>Order Detail</h2>
+            <h2>Detail Pesanan</h2>
             <ul class="bread-crumb">
                 <li class="has-separator">
                     <i class="ion ion-md-home"></i>
-                    <a href="home.html">Home</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="has-separator">
-                    <a href="home.html">Product Detail</a>
+                    <a href="{{ url('akun/pesanan') }}">Pesanan</a>
                 </li>
                 <li class="is-marked">
-                    <a href="checkout.html">Order Detail</a>
+                    <a href="#">Detail Pesanan</a>
                 </li>
             </ul>
         </div>
@@ -83,7 +83,7 @@
                                 </table>
                             </div>
 
-                            <a href="{{ url('konfirmasi') }}" class="button button-outline-secondary">Selanjutnya</a>
+                            <a href="{{ url('akun/pesanan') }}" class="button button-outline-secondary">Kembali</a>
                         </div>
                     </div>
                 </form>
