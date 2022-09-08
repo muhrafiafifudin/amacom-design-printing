@@ -61,10 +61,9 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
         Route::resource('produk', 'ProductController');
         // Transaction
         Route::get('transaksi', 'TransactionController@index')->name('transaksi.index');
-        // Route::get('detail-transaksi/{id}', 'TransactionController@transactionDetail');
         // Report
-        // Route::get('report-transaction', 'TransactionController@reportTransaction')->name('transaksi.report');
-        // Route::get('print-pdf/{fromDate}/{toDate}', 'TransactionController@printPdf');
+        Route::get('report-transaction', 'TransactionController@reportTransaction')->name('transaksi.report');
+        Route::get('print-pdf/{fromDate}/{toDate}', 'TransactionController@printPdf');
     });
 
     // Update Transaction

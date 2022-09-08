@@ -71,7 +71,7 @@
                     <h4 class="text-section">Laporan</h4>
                 </li>
                 <li class="nav-item {{ request()->is('admin/report-transaction') ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="{{ route('admin.transaksi.report') }}">
                         <i class="fas fa-clipboard-check"></i>
                         <p>Laporan Transaksi</p>
                     </a>
