@@ -53,6 +53,8 @@ Route::namespace('Admin')->prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         // Dashboard
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
+        // Customer
+        Route::resource('pelanggan', 'CustomerController');
         // Category
         Route::resource('kategori', 'CategoryController');
         // Product

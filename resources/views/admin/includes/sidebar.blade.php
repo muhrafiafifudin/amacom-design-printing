@@ -29,7 +29,7 @@
                     <h4 class="text-section">Pelanggan</h4>
                 </li>
                 <li class="nav-item {{ request()->is('admin/pelanggan') ? 'active' : '' }}">
-                    <a href="#">
+                    <a href="{{ route('admin.pelanggan.index') }}">
                         <i class="fas fa-users"></i>
                         <p>Pelanggan</p>
                     </a>
