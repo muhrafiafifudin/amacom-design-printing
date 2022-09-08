@@ -14,4 +14,22 @@ class TransactionController extends Controller
 
         return view('admin.pages.transaction.transaction', compact('transactions'));
     }
+
+    public function updateProcess($id)
+    {
+        $transactions = Transaction::findOrFail($id);
+        $transactions->process = 1;
+        $transactions->update();
+
+        return redirect()->route('admin.transaksi.index');
+    }
+
+    public function updateFinish(Request $request, $id)
+    {
+        $transactions = Transaction::findOrFail($id);
+        $transactions->process = 2;
+        $transactions->update();
+
+        return redirect()->route('admin.transaksi.index');
+    }
 }

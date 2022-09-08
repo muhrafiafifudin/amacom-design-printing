@@ -56,9 +56,12 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">No</th>
+                                                    <th scope="col">Nama Pelanggan</th>
                                                     <th scope="col">Order Number</th>
                                                     <th scope="col">Total</th>
-                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Note</th>
+                                                    <th scope="col">No Telp (WA)</th>
+                                                    <th scope="col">Tanggal</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
@@ -68,8 +71,11 @@
                                                     @if ($transaction->process == 0)
                                                         <tr>
                                                             <td>{{ $no++ }}</td>
+                                                            <td>{{ $transaction->users->name }}</td>
                                                             <td>{{ $transaction->order_number }}</td>
                                                             <td>{{ $transaction->total }}</td>
+                                                            <td>{{ $transaction->note }}</td>
+                                                            <td>{{ $transaction->phone_number }}</td>
                                                             <td>{{ $transaction->created_at }}</td>
                                                             <td>
                                                                 <form action="{{ url('admin/transaction/update-process/' . $transaction->id) }}" method="POST">
@@ -77,7 +83,43 @@
                                                                     @method('PUT')
 
                                                                     <button type="submit" class="btn btn-primary">Proses</button>
-                                                                    <a href="{{ url('admin/detail-transaksi', $transaction->id) }}" class="btn btn-warning">View</a>
+                                                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#viewOrder">View</button>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="viewOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <table width="100%">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>Nama Pekerjaan</th>
+                                                                                                <th>File</th>
+                                                                                                <th>Action</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>{{ $transaction->products->name }}</td>
+                                                                                                <td>{{ $transaction->file }}</td>
+                                                                                                <td>
+                                                                                                    <a href="{{ asset('admin/file/' . $transaction->file) }}" target="_blank">Download</a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </form>
                                                             </td>
                                                         </tr>
@@ -91,9 +133,12 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">No</th>
+                                                    <th scope="col">Nama Pelanggan</th>
                                                     <th scope="col">Order Number</th>
                                                     <th scope="col">Total</th>
-                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Note</th>
+                                                    <th scope="col">No Telp (WA)</th>
+                                                    <th scope="col">Tanggal</th>
                                                     <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
@@ -103,16 +148,55 @@
                                                     @if ($transaction->process == 1)
                                                         <tr>
                                                             <td>{{ $no++ }}</td>
+                                                            <td>{{ $transaction->users->name }}</td>
                                                             <td>{{ $transaction->order_number }}</td>
-                                                            <td>{{ $transaction->gross_amount }}</td>
+                                                            <td>{{ $transaction->total }}</td>
+                                                            <td>{{ $transaction->note }}</td>
+                                                            <td>{{ $transaction->phone_number }}</td>
                                                             <td>{{ $transaction->created_at }}</td>
                                                             <td>
-                                                                <form action="{{ url('admin/transaction/update-delivery/' . $transaction->id) }}" method="POST">
+                                                                <form action="{{ url('admin/transaction/update-finish/' . $transaction->id) }}" method="POST">
                                                                     @csrf
                                                                     @method('PUT')
 
-                                                                    <button type="submit" class="btn btn-primary">Kirim</button>
-                                                                    <a href="{{ url('admin/detail-transaksi', $transaction->id) }}" class="btn btn-warning">View</a>
+                                                                    <button type="submit" class="btn btn-primary">Selesai</button>
+                                                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#viewOrder">View</button>
+
+                                                                    <!-- Modal -->
+                                                                    <div class="modal fade" id="viewOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                    </button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <table width="100%">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>Nama Pekerjaan</th>
+                                                                                                <th>File</th>
+                                                                                                <th>Action</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td>{{ $transaction->products->name }}</td>
+                                                                                                <td>{{ $transaction->file }}</td>
+                                                                                                <td>
+                                                                                                    <a href="{{ asset('admin/file/' . $transaction->file) }}" target="_blank">Download</a>
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </form>
                                                             </td>
                                                         </tr>
@@ -126,22 +210,65 @@
                                             <thead>
                                                 <tr>
                                                     <th scope="col">No</th>
+                                                    <th scope="col">Nama Pelanggan</th>
                                                     <th scope="col">Order Number</th>
                                                     <th scope="col">Total</th>
-                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Note</th>
+                                                    <th scope="col">No Telp (WA)</th>
+                                                    <th scope="col">Tanggal</th>
+                                                    <th scope="col">Action</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 @php $no = 1 @endphp
                                                 @foreach ($transactions as $transaction)
-                                                    @if ($transaction->process == 3)
+                                                    @if ($transaction->process == 2)
                                                         <tr>
                                                             <td>{{ $no++ }}</td>
+                                                            <td>{{ $transaction->users->name }}</td>
                                                             <td>{{ $transaction->order_number }}</td>
-                                                            <td>{{ $transaction->gross_amount }}</td>
+                                                            <td>{{ $transaction->total }}</td>
+                                                            <td>{{ $transaction->note }}</td>
+                                                            <td>{{ $transaction->phone_number }}</td>
                                                             <td>{{ $transaction->created_at }}</td>
                                                             <td>
-                                                                <a href="{{ url('admin/detail-transaksi', $transaction->id) }}" class="btn btn-warning">View</a>
+                                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#viewOrder">View</button>
+
+                                                                <!-- Modal -->
+                                                                <div class="modal fade" id="viewOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <table width="100%">
+                                                                                    <thead>
+                                                                                        <tr>
+                                                                                            <th>Nama Pekerjaan</th>
+                                                                                            <th>File</th>
+                                                                                            <th>Action</th>
+                                                                                        </tr>
+                                                                                    </thead>
+                                                                                    <tbody>
+                                                                                        <tr>
+                                                                                            <td>{{ $transaction->products->name }}</td>
+                                                                                            <td>{{ $transaction->file }}</td>
+                                                                                            <td>
+                                                                                                <a href="{{ asset('admin/file/' . $transaction->file) }}" target="_blank">Download</a>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
                                                             </td>
                                                         </tr>
                                                     @endif

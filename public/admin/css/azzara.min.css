@@ -10250,3 +10250,7 @@ div.table-responsive
         padding: 60px 15px !important;
     }
 }
+
+.modal-footer {
+    border-top: none !important;
+}
