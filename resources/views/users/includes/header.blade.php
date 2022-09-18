@@ -3,21 +3,6 @@
     <div class="full-layer-outer-header">
         <div class="container clearfix">
             <nav>
-                <ul class="primary-nav g-nav">
-                    <li>
-                        <a href="tel:+111444989">
-                            <i class="fas fa-phone u-c-brand u-s-m-r-9"></i>
-                            Telephone:+111-444-989</a>
-                    </li>
-                    <li>
-                        <a href="mailto:contact@domain.com">
-                            <i class="fas fa-envelope u-c-brand u-s-m-r-9"></i>
-                            E-mail: contact@domain.com
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <nav>
                 @if (Route::has('login'))
                     <ul class="secondary-nav g-nav">
                         @auth
@@ -89,11 +74,6 @@
                             <li class="u-d-none-lg">
                                 <a href="{{ url('/') }}">
                                     <i class="ion ion-md-home u-c-brand"></i>
-                                </a>
-                            </li>
-                            <li class="u-d-none-lg">
-                                <a href="#">
-                                    <i class="far fa-heart"></i>
                                 </a>
                             </li>
                         </ul>

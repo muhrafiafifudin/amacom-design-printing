@@ -20,48 +20,37 @@
     <div class="container">
         <div class="priority-wrapper u-s-m-b-80">
             <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="single-item-wrapper">
                         <div class="single-item-icon">
                             <i class="ion ion-md-star"></i>
                         </div>
                         <h2>
-                            Great Value
+                            Pelayanan Cepat
                         </h2>
-                        <p>We offer competitive prices on our 100 million plus product range</p>
+                        <p>Melayani pekerjaan anda dengan cepat, maksimal dan amanah</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="single-item-wrapper">
                         <div class="single-item-icon">
                             <i class="ion ion-md-cash"></i>
                         </div>
                         <h2>
-                            Shop with Confidence
+                            Biaya Terjangkau
                         </h2>
-                        <p>Our Protection covers your purchase from click to delivery</p>
+                        <p>Biaya dapat bersaing dengan yang lain</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
-                    <div class="single-item-wrapper">
-                        <div class="single-item-icon">
-                            <i class="ion ion-ios-card"></i>
-                        </div>
-                        <h2>
-                            Safe Payment
-                        </h2>
-                        <p>Pay with the world’s most popular and secure payment methods</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-3">
+                <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="single-item-wrapper">
                         <div class="single-item-icon">
                             <i class="ion ion-md-contacts"></i>
                         </div>
                         <h2>
-                            24/7 Help Center
+                            Kepuasan Anda, Prioritas Kami
                         </h2>
-                        <p>Round-the-clock assistance for a smooth shopping experience</p>
+                        <p>Mengutamakan kepuasan anda, dan menjadikan prioritas utama</p>
                     </div>
                 </div>
             </div>

@@ -42,20 +42,6 @@
                                 <a href="#">{{ $products->name }}</a>
                             </h1>
                         </div>
-                        <ul class="bread-crumb">
-                            <li class="has-separator">
-                                <a href="home.html">Home</a>
-                            </li>
-                            <li class="has-separator">
-                                <a href="shop-v1-root-category.html">Men's Clothing</a>
-                            </li>
-                            <li class="has-separator">
-                                <a href="shop-v2-sub-category.html">Tops</a>
-                            </li>
-                            <li class="is-marked">
-                                <a href="shop-v3-sub-sub-category.html">Hoodies</a>
-                            </li>
-                        </ul>
                     </div>
                     <div class="section-2-short-description u-s-p-y-14">
                         <h6 class="information-heading u-s-m-b-8">Deskripsi :</h6>
