@@ -82,6 +82,7 @@
 
                             <div>
                                 <button class="button button-outline-secondary" type="submit">Pesan</button>
+                                <a href="{{ url('/') }}" class="button button-outline-secondary u-s-m-l-5">Kembali</a>
                             </div>
                         </form>
                     </div>

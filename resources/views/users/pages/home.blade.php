@@ -7,23 +7,22 @@
 @section('content')
 <div class="default-height ph-item">
     <div class="slider-main owl-carousel">
-        <div class="bg-image one">
+        <div class="bg-image">
             <div class="slide-content slide-animation">
-                <h1>Casual Clothing</h1>
-                <h2>lifestyle / clothing / hype</h2>
+                <img src="{{ asset('users/images/banners/banner-homepage.jpg') }}" alt="">
             </div>
         </div>
     </div>
 </div>
 
-<section class="app-priority u-s-m-t-50">
+<section class="app-priority u-s-m-t-20">
     <div class="container">
         <div class="priority-wrapper u-s-m-b-80">
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <div class="single-item-wrapper">
                         <div class="single-item-icon">
-                            <i class="ion ion-md-star"></i>
+                            <i class="ion ion-md-checkmark-circle"></i>
                         </div>
                         <h2>
                             Pelayanan Cepat
@@ -58,7 +57,7 @@
     </div>
 </section>
 
-<section class="section-maker u-s-m-t-50">
+<section class="section-maker u-s-m-t-20">
     <div class="container">
         <div class="sec-maker-header text-center">
             <h3 class="sec-maker-h3">SEMUA JASA YANG TERSEDIA</h3>

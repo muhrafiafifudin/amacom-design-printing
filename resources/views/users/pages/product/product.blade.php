@@ -5,20 +5,13 @@
 @endsection
 
 @section('content')
-<div class="page-style-a">
-    <div class="container">
-        <div class="page-intro">
-            <h2>{{ $categories->type == 0 ? 'Jasa' : 'Print' }}</h2>
-            <ul class="bread-crumb">
-                <li class="has-separator">
-                    <i class="ion ion-md-home"></i>
-                    <a href="#">Home</a>
-                </li>
-                <li class="is-marked">
-                    <a href="#">{{ $categories->type == 0 ? 'Jasa' : 'Print' }}</a>
-                </li>
-            </ul>
-        </div>
+<div class="banner-product">
+    <div class="banner-img">
+        @if ($categories->type == 0)
+            <img src="{{ asset('users/images/banners/banner-design.jpg') }}" alt="">
+        @else
+            <img src="{{ asset('users/images/banners/banner-print.jpg') }}" alt="">
+        @endif
     </div>
 </div>
 

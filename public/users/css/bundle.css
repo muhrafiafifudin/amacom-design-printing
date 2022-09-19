@@ -325,7 +325,7 @@ body {
 }
 
 .default-height {
-    height: 506px;
+    height: 450px;
 }
 
 .slider-fouc {
@@ -336,7 +336,7 @@ body {
     background-repeat: no-repeat;
     position: relative;
     background-size: cover;
-    height: 506px;
+    height: 450px;
 }
 
 .one {
@@ -2150,7 +2150,7 @@ body {
 /* 7.2 Mid-Header */
 .full-layer-mid-header {
     background-color: #ffffff;
-    padding: 35px 0;
+    padding: 15px 0;
 }
 .full-layer-mid-header .row {
     position: relative;
@@ -2493,7 +2493,7 @@ body {
 }
 .bottom-nav > li > a {
     padding: 15px 0;
-    font-size: 14px;
+    font-size: 16px;
     position: relative;
     font-weight: bold;
 }
@@ -4525,4 +4525,12 @@ body {
         left: 90px;
         top: 8px;
     }
+}
+
+.banner-product {
+    max-width: 1400px;
+}
+
+.banner-img img {
+    width: 100%;
 }

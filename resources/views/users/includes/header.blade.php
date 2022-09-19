@@ -56,51 +56,12 @@
             <div class="row clearfix align-items-center">
                 <div class="col-lg-3">
                     <div class="brand-logo text-lg-center">
-                        <a href="home.html">
-                            <h2>AMACOM</h2>
+                        <a href="{{ url('/') }}">
+                            <h2><strong>AMACOM</strong></h2>
                         </a>
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <form class="form-searchbox">
-                        <label class="sr-only" for="search-landscape">Search</label>
-                        <input id="search-landscape" type="text" class="text-field" placeholder="Search everything">
-                        <button id="btn-search" type="submit" class="button button-primary fas fa-search"></button>
-                    </form>
-                </div>
-                <div class="col-lg-2">
-                    <nav>
-                        <ul class="mid-nav g-nav">
-                            <li class="u-d-none-lg">
-                                <a href="{{ url('/') }}">
-                                    <i class="ion ion-md-home u-c-brand"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Mid-Header /- -->
-    <!-- Responsive-Buttons -->
-    <div class="fixed-responsive-container">
-        <div class="fixed-responsive-wrapper">
-            <button type="button" class="button fas fa-search" id="responsive-search"></button>
-        </div>
-        <div class="fixed-responsive-wrapper">
-            <a href="wishlist.html">
-                <i class="far fa-heart"></i>
-                <span class="fixed-item-counter">4</span>
-            </a>
-        </div>
-    </div>
-    <!-- Responsive-Buttons /- -->
-    <!-- Bottom-Header -->
-    <div class="full-layer-bottom-header">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
                     <ul class="bottom-nav g-nav u-d-none-lg">
                         <li>
                             <a href="{{ url('produk/' . $services->type ) }}">Jasa
@@ -131,8 +92,19 @@
                         </li>
                     </ul>
                 </div>
+                <div class="col-lg-2">
+                    <nav>
+                        <ul class="mid-nav g-nav">
+                            <li class="u-d-none-lg">
+                                <a href="{{ url('/') }}">
+                                    <i class="ion ion-md-home u-c-brand"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Bottom-Header /- -->
+    <!-- Mid-Header /- -->
 </header>
