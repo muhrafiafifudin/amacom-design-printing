@@ -88,7 +88,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#">Kontak Kami</a>
+                            <a href="{{ url('kontak-kami') }}">Kontak Kami</a>
                         </li>
                     </ul>
                 </div>

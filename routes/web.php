@@ -29,6 +29,8 @@ Route::get('/', 'DashboardController@index');
 Route::get('produk/{type}', 'ProductController@product');
 Route::get('produk/{type}/{categorySlug}', 'ProductController@productCategory');
 Route::get('produk-detail/{productSlug}', 'ProductController@productDetail');
+// Contact Us
+Route::get('kontak-kami', 'ContactUsController@index');
 
 // User Route
 Route::middleware(['auth'])->group(function () {
