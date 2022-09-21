@@ -12,10 +12,10 @@
             <ul class="bread-crumb">
                 <li class="has-separator">
                     <i class="ion ion-md-home"></i>
-                    <a href="home.html">Home</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="is-marked">
-                    <a href="account.html">Account</a>
+                    <a href="#">Account</a>
                 </li>
             </ul>
         </div>
@@ -59,7 +59,7 @@
                 <div class="u-s-m-b-30">
                     <input type="checkbox" class="check-box" id="accept">
                     <label class="label-text no-color" for="accept">I’ve read and accept the
-                        <a href="terms-and-conditions.html" class="u-c-brand">terms & conditions</a>
+                        <a href="#" class="u-c-brand">terms & conditions</a>
                     </label>
                 </div>
                 <div class="u-s-m-b-45">

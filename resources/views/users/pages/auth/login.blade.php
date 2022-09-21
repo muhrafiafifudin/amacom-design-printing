@@ -12,10 +12,10 @@
             <ul class="bread-crumb">
                 <li class="has-separator">
                     <i class="ion ion-md-home"></i>
-                    <a href="home.html">Home</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="is-marked">
-                    <a href="account.html">Account</a>
+                    <a href="#">Account</a>
                 </li>
             </ul>
         </div>
@@ -51,7 +51,7 @@
                     </div>
                     <div class="group-2 text-right">
                         <div class="page-anchor">
-                            <a href="lost-password.html">
+                            <a href="#">
                                 <i class="fas fa-circle-o-notch u-s-m-r-9"></i>Lost your password?</a>
                         </div>
                     </div>

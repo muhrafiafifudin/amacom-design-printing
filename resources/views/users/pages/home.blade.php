@@ -74,17 +74,6 @@
                         </div>
                         <div class="item-content">
                             <div class="what-product-is">
-                                <ul class="bread-crumb">
-                                    <li class="has-separator">
-                                        <a href="shop-v1-root-category.html">Men's</a>
-                                    </li>
-                                    <li class="has-separator">
-                                        <a href="shop-v2-sub-category.html">Tops</a>
-                                    </li>
-                                    <li>
-                                        <a href="shop-v3-sub-sub-category.html">Hoodies</a>
-                                    </li>
-                                </ul>
                                 <h6 class="item-title">
                                     <a href="{{ url('produk-detail/' . $product->products_slug) }}">{{ $product->name }}</a>
                                 </h6>

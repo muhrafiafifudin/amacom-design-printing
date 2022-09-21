@@ -12,10 +12,10 @@
             <ul class="bread-crumb">
                 <li class="has-separator">
                     <i class="ion ion-md-home"></i>
-                    <a href="home.html">Home</a>
+                    <a href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="is-marked">
-                    <a href="single-product.html">Detail</a>
+                    <a href="#">Detail</a>
                 </li>
             </ul>
         </div>
