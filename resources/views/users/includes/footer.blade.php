@@ -44,7 +44,7 @@
                 </ul>
             </div>
             <p class="copyright-text">Copyright &copy; 2022
-                <a href="{{ url('/') }}">AMACOM Design & Printing</a> All Right Reserved</p>
+                <a href="{{ url('/') }}">AMACOM Design & Printing</a></p>
         </div>
     </div>
     <!-- Bottom-Footer /- -->

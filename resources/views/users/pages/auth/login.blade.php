@@ -44,18 +44,6 @@
                     </label>
                     <input type="password" name="password" id="password" class="text-field" placeholder="Masukkan Password ...">
                 </div>
-                <div class="group-inline u-s-m-b-30">
-                    <div class="group-1">
-                        <input type="checkbox" class="check-box" id="remember-me-token">
-                        <label class="label-text" for="remember-me-token">Remember me</label>
-                    </div>
-                    <div class="group-2 text-right">
-                        <div class="page-anchor">
-                            <a href="#">
-                                <i class="fas fa-circle-o-notch u-s-m-r-9"></i>Lost your password?</a>
-                        </div>
-                    </div>
-                </div>
                 <div class="m-b-45">
                     <button type="submit" class="button button-outline-secondary w-100">Login</button>
                 </div>

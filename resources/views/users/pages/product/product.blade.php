@@ -5,51 +5,25 @@
 @endsection
 
 @section('content')
-<div class="banner-product">
-    <div class="banner-img">
-        @if ($categories->type == 0)
-            <img src="{{ asset('users/images/banners/banner-design.jpg') }}" alt="">
-        @else
-            <img src="{{ asset('users/images/banners/banner-print.jpg') }}" alt="">
-        @endif
+<div class="default-height ph-item">
+    <div class="slider-main owl-carousel">
+        <div class="bg-image">
+            <div class="slide-content slide-animation">
+                @if ($categories->type == 0)
+                    <img src="{{ asset('users/images/banners/banner-design.jpg') }}" alt="">
+                @else
+                    <img src="{{ asset('users/images/banners/banner-print.jpg') }}" alt="">
+                @endif
+            </div>
+        </div>
     </div>
 </div>
 
-<div class="page-shop u-s-p-t-20">
+<div class="page-shop u-s-p-t-80">
     <div class="container">
         <div class="row">
             <!-- Shop-Right-Wrapper -->
             <div class="col-lg-12 col-md-12 col-sm-12">
-                <!-- Page-Bar -->
-                <div class="page-bar clearfix">
-                    <!-- Toolbar Sorter 1  -->
-                    <div class="toolbar-sorter">
-                        <div class="select-box-wrapper">
-                            <label class="sr-only" for="sort-by">Sort By</label>
-                            <select class="select-box" id="sort-by">
-                                <option selected="selected" value="">Sort By: Best Selling</option>
-                                <option value="">Sort By: Latest</option>
-                                <option value="">Sort By: Lowest Price</option>
-                                <option value="">Sort By: Highest Price</option>
-                                <option value="">Sort By: Best Rating</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- //end Toolbar Sorter 1  -->
-                    <!-- Toolbar Sorter 2  -->
-                    <div class="toolbar-sorter-2">
-                        <div class="select-box-wrapper">
-                            <label class="sr-only" for="show-records">Show Records Per Page</label>
-                            <select class="select-box" id="show-records">
-                                <option selected="selected" value="">Show: 8</option>
-                                <option value="">Show: 16</option>
-                                <option value="">Show: 28</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- //end Toolbar Sorter 2  -->
-                </div>
-                <!-- Page-Bar /- -->
                 <!-- Row-of-Product-Container -->
                 <div class="row product-container grid-style">
                     @foreach ($products as $product)

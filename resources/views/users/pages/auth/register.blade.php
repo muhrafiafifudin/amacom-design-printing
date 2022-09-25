@@ -56,12 +56,6 @@
                     </label>
                     <input type="password" name="password_confirmation" id="password_confirmation" class="text-field" placeholder="Password">
                 </div>
-                <div class="u-s-m-b-30">
-                    <input type="checkbox" class="check-box" id="accept">
-                    <label class="label-text no-color" for="accept">I’ve read and accept the
-                        <a href="#" class="u-c-brand">terms & conditions</a>
-                    </label>
-                </div>
                 <div class="u-s-m-b-45">
                     <button type="submit" class="button button-primary w-100">Register</button>
                 </div>
