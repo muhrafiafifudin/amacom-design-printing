@@ -76,7 +76,7 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="slug">Slug</label>
-                                        <input type="text" name="slug" class="form-control" value="{{ $products->slug }}" placeholder="Masukkan Slug / Link Produk ..." required />
+                                        <input type="text" name="products_slug" class="form-control" value="{{ $products->products_slug }}" placeholder="Masukkan Slug / Link Produk ..." required />
                                     </div>
                                 </div>
                                 <div class="card-action">
