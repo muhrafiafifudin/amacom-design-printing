@@ -34,7 +34,7 @@ class TransactionController extends Controller
 
         $pdf = PDF::loadView('admin.pages.report.print-pdf', compact('transactions', 'fromDate', 'toDate'))->setPaper('a4', 'landscape');
 
-        return $pdf->download('Stokis NASA.pdf');
+        return $pdf->download('Laporan AMACOM.pdf');
     }
 
     public function updateProcess($id)

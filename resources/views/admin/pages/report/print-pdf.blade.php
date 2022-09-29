@@ -44,23 +44,37 @@
             <th>Nomor Transaksi</th>
             <th>Pekerjaan</th>
             <th>Tanggal Masuk</th>
-            <th>Total</th>
+            <th colspan="2">Total</th>
         </tr>
-        @php $no=1; @endphp
-        @forelse ($transactions as $transaction)
+        @php $no=1; $gross_amount = 0; @endphp
+        @foreach ($transactions as $transaction)
+            @php
+                $gross_amount += $transaction->total
+            @endphp
+
             <tr class="text-center">
                 <td>{{ $no++ }}</td>
                 <td>{{ $transaction->users->name }}</td>
                 <td>{{ $transaction->order_number }}</td>
                 <td>{{ $transaction->products->name }}</td>
                 <td>{{ date('d M Y', strtotime($transaction->created_at)) }}</td>
-                <td>Rp. {{ number_format($transaction->total, 2, ',', '.') }}</td>
+                <td style="border-right-color: white">Rp.</td>
+                <td style="text-align: right; padding-right: 20px">{{ number_format($transaction->total, 2, ',', '.') }}</td>
             </tr>
-        @empty
+        @endforeach
+
+        @if ($transactions->count() > 0)
             <tr>
-                <td class="text-center" colspan="5"><strong>Data Kosong</strong></td>
+                <td colspan="4"></td>
+                <td class="text-center"><strong>Total</strong></td>
+                <td class="text-center" style="border-right-color: white"><strong>Rp.</strong></td>
+                <td style="text-align: right; padding-right: 20px"><strong>{{ number_format($gross_amount, 2, ',', '.') }}</strong></td>
             </tr>
-        @endforelse
+        @else
+            <tr>
+                <td class="text-center" colspan="7"><strong>Data Kosong</strong></td>
+            </tr>
+        @endif
     </table>
 
     <table width="100%" style="border: none; margin-top: 8rem">
