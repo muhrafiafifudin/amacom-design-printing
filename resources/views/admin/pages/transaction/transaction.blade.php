@@ -83,10 +83,10 @@
                                                                     @method('PUT')
 
                                                                     <button type="submit" class="btn btn-primary">Proses</button>
-                                                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#viewOrder">View</button>
+                                                                    <button type="button" class="btn btn-warning" id="viewDetail1" data-toggle="modal" data-target="#viewOrder1" data-jobdesc1="{{ $transaction->products->name }}" data-filename1="{{ $transaction->file }}">View</button>
 
                                                                     <!-- Modal -->
-                                                                    <div class="modal fade" id="viewOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                    <div class="modal fade" id="viewOrder1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header">
@@ -105,10 +105,10 @@
                                                                                         </thead>
                                                                                         <tbody>
                                                                                             <tr>
-                                                                                                <td>{{ $transaction->products->name }}</td>
-                                                                                                <td>{{ $transaction->file }}</td>
+                                                                                                <td id="jobdesc1"></td>
+                                                                                                <td id="filename1"></td>
                                                                                                 <td>
-                                                                                                    <a href="{{ asset('admin/file/' . $transaction->file) }}" target="_blank">Download</a>
+                                                                                                    <button type="button" class="btn btn-success" id="file1">Download</button>
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </tbody>
@@ -160,10 +160,10 @@
                                                                     @method('PUT')
 
                                                                     <button type="submit" class="btn btn-primary">Selesai</button>
-                                                                    <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#viewOrder">View</button>
+                                                                    <button type="button" class="btn btn-warning" id="viewDetail2" data-toggle="modal" data-target="#viewOrder2" data-jobdesc2="{{ $transaction->products->name }}" data-filename2="{{ $transaction->file }}">View</button>
 
                                                                     <!-- Modal -->
-                                                                    <div class="modal fade" id="viewOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                    <div class="modal fade" id="viewOrder2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                                                             <div class="modal-content">
                                                                                 <div class="modal-header">
@@ -182,10 +182,10 @@
                                                                                         </thead>
                                                                                         <tbody>
                                                                                             <tr>
-                                                                                                <td>{{ $transaction->products->name }}</td>
-                                                                                                <td>{{ $transaction->file }}</td>
+                                                                                                <td id="jobdesc2"></td>
+                                                                                                <td id="filename2"></td>
                                                                                                 <td>
-                                                                                                    <a href="{{ asset('admin/file/' . $transaction->file) }}" target="_blank">Download</a>
+                                                                                                    <button type="button" class="btn btn-success" id="file2">Download</button>
                                                                                                 </td>
                                                                                             </tr>
                                                                                         </tbody>
@@ -232,10 +232,10 @@
                                                             <td>{{ $transaction->phone_number }}</td>
                                                             <td>{{ $transaction->created_at }}</td>
                                                             <td>
-                                                                <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#viewOrder">View</button>
+                                                                <button type="button" class="btn btn-warning" id="viewDetail3" data-toggle="modal" data-target="#viewOrder3" data-jobdesc3="{{ $transaction->products->name }}" data-filename3="{{ $transaction->file }}">View</button>
 
                                                                 <!-- Modal -->
-                                                                <div class="modal fade" id="viewOrder" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                                <div class="modal fade" id="viewOrder3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                                     <div class="modal-dialog modal-dialog-centered" role="document">
                                                                         <div class="modal-content">
                                                                             <div class="modal-header">
@@ -254,10 +254,10 @@
                                                                                     </thead>
                                                                                     <tbody>
                                                                                         <tr>
-                                                                                            <td>{{ $transaction->products->name }}</td>
-                                                                                            <td>{{ $transaction->file }}</td>
+                                                                                            <td id="jobdesc3"></td>
+                                                                                            <td id="filename3"></td>
                                                                                             <td>
-                                                                                                <a href="{{ asset('admin/file/' . $transaction->file) }}" target="_blank">Download</a>
+                                                                                                <button type="button" class="btn btn-success" id="file3">Download</button>
                                                                                             </td>
                                                                                         </tr>
                                                                                     </tbody>
@@ -286,3 +286,95 @@
         </div>
     </div>
 @endsection
+
+@push('scripts')
+<script>
+    $(document).ready(function() {
+        $(document).on('click', '#viewDetail1', function() {
+            var jobdesc = $(this).data('jobdesc1')
+            var filename = $(this).data('filename1')
+
+            $('#jobdesc1').text(jobdesc)
+            $('#filename1').text(filename)
+
+            $('#file1').on('click', function () {
+                $.ajax({
+                    url: `{{ asset('admin/file') }}/${filename}`,
+                    method: 'GET',
+                    xhrFields: {
+                        responseType: 'blob'
+                    },
+                    success: function (data) {
+                        var a = document.createElement('a')
+                        var url = window.URL.createObjectURL(data)
+                        a.href = url
+                        a.download = filename + '.pdf'
+                        document.body.append(a)
+                        a.click()
+                        a.remove()
+                        window.URL.revokeObjectURL(url)
+                    }
+                })
+            })
+        })
+
+
+
+        $(document).on('click', '#viewDetail2', function() {
+            var jobdesc = $(this).data('jobdesc2')
+            var filename = $(this).data('filename2')
+
+            $('#jobdesc2').text(jobdesc)
+            $('#filename2').text(filename)
+
+            $('#file2').on('click', function () {
+                $.ajax({
+                    url: `{{ asset('admin/file') }}/${filename}`,
+                    method: 'GET',
+                    xhrFields: {
+                        responseType: 'blob'
+                    },
+                    success: function (data) {
+                        var a = document.createElement('a')
+                        var url = window.URL.createObjectURL(data)
+                        a.href = url
+                        a.download = filename + '.pdf'
+                        document.body.append(a)
+                        a.click()
+                        a.remove()
+                        window.URL.revokeObjectURL(url)
+                    }
+                })
+            })
+        })
+
+        $(document).on('click', '#viewDetail3', function() {
+            var jobdesc = $(this).data('jobdesc3')
+            var filename = $(this).data('filename3')
+
+            $('#jobdesc3').text(jobdesc)
+            $('#filename3').text(filename)
+
+            $('#file3').on('click', function () {
+                $.ajax({
+                    url: `{{ asset('admin/file') }}/${filename}`,
+                    method: 'GET',
+                    xhrFields: {
+                        responseType: 'blob'
+                    },
+                    success: function (data) {
+                        var a = document.createElement('a')
+                        var url = window.URL.createObjectURL(data)
+                        a.href = url
+                        a.download = filename + '.pdf'
+                        document.body.append(a)
+                        a.click()
+                        a.remove()
+                        window.URL.revokeObjectURL(url)
+                    }
+                })
+            })
+        })
+    })
+</script>
+@endpush
